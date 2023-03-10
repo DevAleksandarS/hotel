@@ -1,0 +1,810 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Hotel is a modern, stylish hotel located in the heart of a bustling city. Our hotel features luxurious accommodations, state-of-the-art amenities, and exceptional service that is sure to exceed your expectations. Our rooms are spacious and beautifully appointed with plush bedding, high-end furniture, and all the latest technology to make your stay comfortable and convenient. Whether you're here for business or pleasure, our friendly staff is dedicated to ensuring your stay is an unforgettable experience."
+    />
+
+    <!-- WEBSITE ICON -->
+    <link rel="icon" type="image/x-icon" href="./img/favicon.png" />
+    <link rel="apple-touch-icon" href="./img/apple-icon.png" />
+    <link rel="manifest" href="./manifest.webmanifest" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="./style/main-style.css" />
+
+    <script src="./script/script.js" defer></script>
+
+    <title>HOTEL</title>
+  </head>
+  <body>
+    <div id="bg-close-side-nav" class="bg-close-side-nav"></div>
+
+    <div id="side-nav" class="side-nav">
+      <button id="close-side-nav" class="close-side-nav">+</button>
+
+      <ul class="nav-links">
+        <li class="nav-link"><a class="link" href="#about-us">About</a></li>
+        <li class="nav-link"><a class="link" href="#service">Service</a></li>
+        <li class="nav-link"><a class="link" href="#rooms">Rooms</a></li>
+        <li class="nav-link"><a class="link" href="#blog">Blog</a></li>
+        <li class="nav-link"><a class="link" href="#">Contact</a></li>
+      </ul>
+
+      <button class="nav-cta">Sign Up</button>
+    </div>
+
+    <!-- NAVBAR -->
+    <nav id="navbar">
+      <div class="container flex-center">
+        <a class="logo" href="#">HOTEL</a>
+
+        <ul class="nav-links">
+          <li class="nav-link"><a class="link" href="#about-us">About</a></li>
+          <li class="nav-link"><a class="link" href="#service">Service</a></li>
+          <li class="nav-link"><a class="link" href="#rooms">Rooms</a></li>
+          <li class="nav-link"><a class="link" href="#blog">Blog</a></li>
+          <li class="nav-link"><a class="link" href="#">Contact</a></li>
+        </ul>
+
+        <div class="btns">
+          <button class="nav-cta">Sign Up</button>
+
+          <button id="open-side-nav" class="side-nav-btn">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section id="hero-section" class="hero-section">
+      <div class="container">
+        <h1 class="main-heading">Exclusive Boutique Hotel</h1>
+
+        <p class="white-text">Luxury Boutique Hotel</p>
+
+        <div class="social-apps-container">
+          <button class="social-icon">
+            <img src="./img/facebook.png" alt="Facebook Icon" />
+          </button>
+
+          <button class="social-icon">
+            <img src="./img/twitter.png" alt="Twitter Icon" />
+          </button>
+
+          <button class="social-icon">
+            <img src="./img/instagram.png" alt="Instagram Icon" />
+          </button>
+        </div>
+
+        <div id="search-container" class="search-container">
+          <div class="availability-search">
+            <div class="arrival b-right block">
+              <p class="text">ARRIVAL</p>
+
+              <div id="arrival-date-input" class="date-input">
+                <p id="arrival-day" class="day">18</p>
+
+                <div class="date-info">
+                  <p id="arrival-month-year" class="month-year">Oct, 2019</p>
+
+                  <p id="arrival-day-name" class="day-name">Friday</p>
+                </div>
+
+                <div class="btn-arrow">
+                  <img src="./img/arrow-down.png" alt="Arrow Down" />
+                </div>
+              </div>
+            </div>
+
+            <div class="departure b-right block">
+              <p class="text">DEPARTURE</p>
+
+              <div id="departure-date-input" class="date-input">
+                <p id="departure-day" class="day">19</p>
+
+                <div class="date-info">
+                  <p id="departure-month-year" class="month-year">Oct, 2019</p>
+
+                  <p id="departure-day-name" class="day-name">Saturday</p>
+                </div>
+
+                <div class="btn-arrow">
+                  <img src="./img/arrow-down.png" alt="Arrow Down" />
+                </div>
+              </div>
+            </div>
+
+            <div class="adults b-right block">
+              <p class="text center">ADULTS</p>
+
+              <div class="number-container">
+                <button id="adults-minus">-</button>
+
+                <p id="number-adults" class="number">2</p>
+
+                <button id="adults-plus">+</button>
+              </div>
+            </div>
+
+            <div class="children b-right block">
+              <p class="text center">CHILDREN</p>
+
+              <div class="number-container">
+                <button id="children-minus">-</button>
+
+                <p id="number-children" class="number">0</p>
+
+                <button id="children-plus">+</button>
+              </div>
+            </div>
+
+            <div class="search-button-container block">
+              <button class="green-btn">Check Availability</button>
+            </div>
+          </div>
+
+          <button
+            onclick="location.href=`#rooms`"
+            id="scroll-down"
+            class="down-btn"
+          >
+            <img src="./img/down.png" alt="Down Icon" />
+          </button>
+
+          <div class="blue-container-behind"></div>
+
+          <div class="dots"><img src="./img/dots.png" alt="Dots" /></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT US SECTION -->
+    <section class="section pt-40">
+      <div
+        id="about-us"
+        class="container flex-space p144-176 mobile-column pt-0 pb-96"
+      >
+        <div class="text-container width390">
+          <div class="icon"><img src="./img/bed.png" alt="Bed Icon" /></div>
+
+          <h2>Luxury Plaza Hotel for You</h2>
+
+          <p class="text">
+            Distant orb has power to raise and purify our thoughts like a strain
+            of sacred music.
+          </p>
+
+          <button class="about-cta">About us</button>
+        </div>
+
+        <div class="card first">
+          <div class="image1"></div>
+
+          <div class="bottom">
+            <button class="play-btn">
+              <img src="./img/play.png" alt="Play Button" />
+            </button>
+
+            <div class="desc">
+              <p class="darker-text">Play video</p>
+
+              <p class="text">2:34</p>
+            </div>
+          </div>
+
+          <div class="addiotion block">
+            <p class="darker-text"><span>%</span>92</p>
+            <p class="text">Succeful Booking</p>
+            <img src="./img/analitics.png" alt="Analitics Image" />
+          </div>
+
+          <div class="container-behind"></div>
+
+          <div class="container-behind-second"></div>
+
+          <div class="dots"><img src="./img/dots.png" alt="Dots" /></div>
+        </div>
+      </div>
+
+      <div class="lighter">
+        <div class="container flex-space p144-176 mobile-column pt-96">
+          <div class="card second">
+            <div class="image2"></div>
+
+            <div class="bottom">
+              <div class="icon">
+                <img src="./img/star.png" alt="Star Icon" />
+              </div>
+
+              <div class="desc">
+                <p class="darker-text">+ $189</p>
+
+                <p class="text">Additional Price</p>
+              </div>
+            </div>
+
+            <div class="container-behind"></div>
+
+            <div class="container-behind-second"></div>
+
+            <div class="dots">
+              <img src="./img/lighter-dots.png" alt="Dots" />
+            </div>
+          </div>
+
+          <div class="text-container width470">
+            <div class="icon"><img src="./img/spa.png" alt="Spa Icon" /></div>
+
+            <h2>Wellness & Spa</h2>
+
+            <p class="text">
+              Raise and purify our thoughts like a strain of sacred music, or a
+              noble picture, or a passage from the grander poets.
+            </p>
+
+            <button class="about-cta">Explore</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="container flex-space p144-176 mobile-column pb-112">
+        <div class="text-container width390">
+          <div class="icon">
+            <img src="./img/coffee.png" alt="Coffee Icon" />
+          </div>
+
+          <h2>Restaurants & Bars</h2>
+
+          <p class="text">
+            Distant orb has power to raise and purify our thoughts like a strain
+            of sacred music.
+          </p>
+
+          <button class="about-cta">Reserve a table</button>
+        </div>
+
+        <div class="card third">
+          <div class="image3"></div>
+
+          <div class="bottom">
+            <div class="icon">
+              <img src="./img/burger.png" alt="Burger Icon" />
+            </div>
+
+            <div class="desc">
+              <p class="darker-text">+ $20</p>
+
+              <p class="text">Lunch Price</p>
+            </div>
+          </div>
+
+          <img class="addiotion" src="./img/map.webp" alt="Map Image" />
+
+          <div class="container-behind"></div>
+
+          <div class="container-behind-second"></div>
+
+          <div class="dots">
+            <img src="./img/dots.png" alt="Dots" />
+          </div>
+        </div>
+      </div>
+
+      <div class="lighter">
+        <div id="service" class="container p144-176 pt-75">
+          <h2 class="second-heading">Adventages</h2>
+
+          <div class="grid-field">
+            <div class="first-block block">
+              <div class="icon bigger">
+                <img src="./img/wifi.png" alt="Wi-fi Icon" />
+              </div>
+
+              <div class="image-field"></div>
+
+              <h3 class="third-heading">Free Wi-Fi</h3>
+
+              <p class="text">
+                Distant orb has power to raise and purify our thoughts like a
+                strain of sacred music, or a noble picture, or a passage.
+              </p>
+            </div>
+
+            <div class="second-block block">
+              <div class="icon white">
+                <img src="./img/events.png" alt="Events Icon" />
+              </div>
+
+              <div class="text-container w154">
+                <h4 style="margin-top: 8px" class="fourth-heading">
+                  Special Events
+                </h4>
+
+                <p class="text">
+                  Distant orb has power to raise and purify our thoughts like a
+                  strain of sacred music, or a noble picture, or a passage from
+                  the grander poets.
+                </p>
+              </div>
+            </div>
+
+            <div class="block">
+              <div class="icon blue">
+                <img src="./img/price.png" alt="Price Icon" />
+              </div>
+
+              <div class="text-container">
+                <h4 style="margin-top: 24px" class="fourth-heading">
+                  Best Price
+                </h4>
+
+                <p class="text">
+                  Power to raise and purify our thoughts like a strain.
+                </p>
+              </div>
+            </div>
+
+            <div class="block">
+              <div class="icon white">
+                <img src="./img/calendar.png" alt="Calendar Icon" />
+              </div>
+
+              <div class="text-container">
+                <h4 style="margin-top: 24px" class="fourth-heading">
+                  Free Cancellation
+                </h4>
+
+                <p class="text">
+                  Like a strain of sacred music, or a noble picture.
+                </p>
+              </div>
+            </div>
+
+            <div class="dots-left"><img src="./img/dots.png" alt="Dots" /></div>
+
+            <div class="dots-right">
+              <img src="./img/lighter-dots.png" alt="Dots" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ROOMS SECTION -->
+    <section id="rooms" class="section">
+      <div class="container p78-112">
+        <div class="top-text">
+          <h2 class="second-heading">Rooms</h2>
+
+          <p class="side-text">
+            Distant orb has power to raise and purify our thoughts like a strain
+            of sacred music.
+          </p>
+        </div>
+
+        <div class="rooms">
+          <button id="slider-rooms-left-btn" class="slider-btn left">
+            <img src="./img/left-arrow.png" alt="Left Arrow" />
+          </button>
+
+          <div class="slider">
+            <div id="room1" class="slider-block">
+              <div class="price-block"><p class="price">From $99</p></div>
+
+              <div class="img-container img1"></div>
+
+              <div class="room-info">
+                <p class="room-name">Classic Room</p>
+
+                <p class="about">
+                  Distant orb has power to raise and purify our thoughts like a
+                  strain.
+                </p>
+
+                <button>Book now</button>
+              </div>
+
+              <div class="container-behind"></div>
+
+              <div class="container-behind-second"></div>
+            </div>
+
+            <div id="room2" class="slider-block second dark-blue">
+              <div class="price-block"><p class="price">From $199</p></div>
+
+              <div class="img-container img2"></div>
+
+              <div class="room-info">
+                <p class="room-name white">Double Room</p>
+
+                <p class="about white">
+                  Power to raise and purify our thoughts like a strain of sacred
+                  music.
+                </p>
+
+                <button class="green-btn">Book now</button>
+              </div>
+
+              <div class="container-behind dark-blue"></div>
+
+              <div class="container-behind-second dark-blue"></div>
+            </div>
+
+            <div id="room3" class="slider-block third">
+              <div class="price-block"><p class="price">From $299</p></div>
+
+              <div class="img-container img3"></div>
+
+              <div class="room-info">
+                <p class="room-name">Super Room</p>
+
+                <p class="about">
+                  Raise and purify our thoughts like a strain of sacred music,
+                  or a noble.
+                </p>
+
+                <button>Book now</button>
+              </div>
+
+              <div class="container-behind"></div>
+
+              <div class="container-behind-second"></div>
+            </div>
+          </div>
+
+          <button id="slider-rooms-right-btn" class="slider-btn right">
+            <img src="./img/right-arrow.png" alt="Right Arrow" />
+          </button>
+
+          <div class="dots-left"><img src="./img/dots.png" alt="Dots" /></div>
+
+          <div class="dots-right">
+            <img src="./img/lighter-dots.png" alt="Dots" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROGRESS -->
+    <section class="section">
+      <div class="dark-blue">
+        <div class="container p98-64">
+          <div class="progress-container">
+            <div>
+              <div class="circle proc73">
+                <div class="progress"><p class="progress-number">73</p></div>
+              </div>
+              <p class="name-progress">Super Suites</p>
+            </div>
+
+            <div>
+              <div class="circle proc42">
+                <div class="progress"><p class="progress-number">42</p></div>
+              </div>
+              <p class="name-progress">Years of Expirience</p>
+            </div>
+
+            <div>
+              <div class="circle proc50">
+                <div class="progress"><p class="progress-number">50</p></div>
+              </div>
+              <p class="name-progress">Family Rooms</p>
+            </div>
+
+            <div>
+              <div class="circle proc99">
+                <div class="progress"><p class="progress-number">99</p></div>
+              </div>
+              <p class="name-progress">Hotel Personal</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS SECTION -->
+    <section class="section">
+      <div id="testimonials" class="container p94-35">
+        <h2 class="second-header">Testimonials</h2>
+
+        <div class="testimonials">
+          <div class="slider-btn left">
+            <img src="./img/left-arrow.png" alt="Left Arrow" />
+          </div>
+
+          <div class="slider">
+            <div class="slider-block">
+              <div class="icon">
+                <img src="./img/double-quotes.png" alt="Double Quotes" />
+              </div>
+              <h3 class="third-heading width195">My Best Vacation</h3>
+
+              <p class="testimonial">
+                "Distant orb has power to raise and purify our thoughts like a
+                strain of sacred music, or a noble picture, or a passage from
+                the grander poets. By the same illusion which lifts the horizon
+                of the sea to the level of the spectator on a hillside, the
+                sable cloud beneath was dished out, and the car seemed."
+              </p>
+
+              <div class="customer">
+                <img src="./img/customer1.webp" alt="Customer Image" />
+
+                <div class="customer-info">
+                  <p class="customer-name">Aasiya Jayavant</p>
+                  <img class="rating-img" src="./img/rating.png" alt="Rating" />
+                </div>
+              </div>
+
+              <div class="container-behind"></div>
+
+              <div class="container-behind-second"></div>
+            </div>
+
+            <div class="slider-block second">
+              <div class="icon">
+                <img src="./img/double-quotes.png" alt="Double Quotes" />
+              </div>
+              <h3 class="third-heading width195">Very Good Hotel</h3>
+
+              <p class="testimonial">
+                "Peep at some distant orb has power to raise and purify our
+                thoughts like a strain of sacred music, or a noble picture, or a
+                passage from the grander poets. It always does one
+                good.Apparently we had reached a great height in the atmosphere,
+                for the sky was a dead black."
+              </p>
+
+              <div class="customer">
+                <img src="./img/customer2.webp" alt="Customer Image" />
+
+                <div class="customer-info">
+                  <p class="customer-name">Cameron Rogers</p>
+                  <img class="rating-img" src="./img/rating.png" alt="Rating" />
+                </div>
+              </div>
+
+              <div class="container-behind"></div>
+
+              <div class="container-behind-second"></div>
+            </div>
+          </div>
+
+          <div class="slider-btn right">
+            <img src="./img/right-arrow.png" alt="Right Arrow" />
+          </div>
+
+          <div class="dots-left"><img src="./img/dots.png" alt="Dots" /></div>
+
+          <div class="dots-right">
+            <img src="./img/lighter-dots.png" alt="Dots" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BLOG SECTION -->
+    <section id="blog" class="section">
+      <div class="lighter">
+        <div class="container p94-35">
+          <h2 class="second-header">From Blog</h2>
+
+          <div class="blog">
+            <div class="slider-btn left">
+              <img src="./img/left-arrow.png" alt="Left Arrow" />
+            </div>
+
+            <div class="slider">
+              <div class="slider-block">
+                <div class="date-container"><p class="date">10/19</p></div>
+
+                <div class="image-container img1"></div>
+
+                <div class="text-container">
+                  <h3 class="third-heading">Where Travel this Summer</h3>
+
+                  <p class="short-info">
+                    Distant orb has power to raise and purify our thoughts like
+                    a strain.
+                  </p>
+
+                  <div class="creator-info">
+                    <p class="creator">Pedro Amorim</p>
+
+                    <div class="number-of-comments">
+                      <img src="./img/comment.png" alt="Comment Icon" />
+
+                      <p class="number">3</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="container-behind"></div>
+
+                <div class="container-behind-second"></div>
+              </div>
+
+              <div class="slider-block second">
+                <div class="date-container"><p class="date">09/19</p></div>
+
+                <div class="image-container img2"></div>
+
+                <div class="text-container">
+                  <h3 class="third-heading">Better Places for Traveling</h3>
+
+                  <p class="short-info">
+                    Distant orb has power to raise and purify our thoughts like
+                    a strain.
+                  </p>
+
+                  <div class="creator-info">
+                    <p class="creator">Juan Jose Esteve</p>
+
+                    <div class="number-of-comments">
+                      <img src="./img/comment.png" alt="Comment Icon" />
+
+                      <p class="number">9</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="container-behind"></div>
+
+                <div class="container-behind-second"></div>
+              </div>
+
+              <div class="slider-block third">
+                <div class="date-container"><p class="date">07/19</p></div>
+
+                <div class="image-container img3"></div>
+
+                <div class="text-container">
+                  <h3 class="third-heading">Why Our Hotel is the Best Place</h3>
+
+                  <p class="short-info">
+                    Distant orb has power to raise and purify our thoughts like
+                    a strain.
+                  </p>
+
+                  <div class="creator-info">
+                    <p class="creator">Shaamikh Al Hakim</p>
+
+                    <div class="number-of-comments">
+                      <img src="./img/comment.png" alt="Comment Icon" />
+
+                      <p class="number">15</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="container-behind"></div>
+
+                <div class="container-behind-second"></div>
+              </div>
+            </div>
+
+            <div class="slider-btn right">
+              <img src="./img/right-arrow.png" alt="Right Arrow" />
+            </div>
+
+            <div class="dots-left"><img src="./img/dots.png" alt="Dots" /></div>
+
+            <div class="dots-right">
+              <img src="./img/lighter-dots.png" alt="Dots" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+      <div class="images">
+        <div class="grid-container">
+          <img src="./img/image1.webp" alt="Image" />
+
+          <img src="./img/image2.webp" alt="Image" />
+
+          <img src="./img/image3.webp" alt="Image" />
+
+          <img src="./img/image4.webp" alt="Image" />
+
+          <img src="./img/image5.webp" alt="Image" />
+
+          <img src="./img/image6.webp" alt="Image" />
+        </div>
+        <div class="dark-layer"></div>
+      </div>
+
+      <div class="dark-blue">
+        <div class="container flex-space p75-71 mob-column">
+          <div class="left">
+            <h3 class="third-heading">HOTEL</h3>
+
+            <div class="phone">
+              <img src="./img/phone.png" alt="Phone Icon" />
+              <a class="hotel-info" href="tel:(4321) 0987-654-320"
+                >(4321) 0987-654-320</a
+              >
+            </div>
+
+            <div class="email">
+              <img src="./img/mail.png" alt="Mail Icon" />
+              <a class="hotel-info" href="mailto:support@hotel.com"
+                >support@hotel.com</a
+              >
+            </div>
+
+            <div class="location">
+              <img src="./img/location.png" alt="Location Icon" />
+              <a class="hotel-info darker" class="brighter" href="#"
+                >33 Jaja Park Rd, Yellow, USA</a
+              >
+            </div>
+          </div>
+
+          <div class="middle">
+            <p class="bigger-text">MENU</p>
+
+            <div class="nav-links-container">
+              <div class="first">
+                <a class="nav-link" href="#about-us">About</a>
+
+                <a class="nav-link" href="#service">Service</a>
+
+                <a class="nav-link" href="#rooms">Rooms</a>
+              </div>
+
+              <div class="second">
+                <a class="nav-link" href="#testimonials">Testimonials</a>
+
+                <a class="nav-link" href="#blog">Blog</a>
+
+                <a class="nav-link" href="#">Contact</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="right">
+            <p class="bigger-text">SUBSCRIBE</p>
+
+            <div class="email-input">
+              <input class="input-box" type="email" placeholder="Email" />
+              <button><img src="./img/send.png" alt="Send Icon" /></button>
+            </div>
+
+            <p class="text">No spam. Only profit.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="darker-blue">
+        <div class="container flex-center p31-32">
+          <div class="social-apps-container">
+            <button class="social-icon">
+              <img src="./img/facebook.png" alt="Facebook Icon" />
+            </button>
+
+            <button class="social-icon">
+              <img src="./img/twitter.png" alt="Twitter Icon" />
+            </button>
+
+            <button class="social-icon">
+              <img src="./img/instagram.png" alt="Instagram Icon" />
+            </button>
+          </div>
+
+          <p class="copyright">Copyright © 2019 Hotel. All Rights Reserved.</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,1132 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;300;400&display=swap')
+  
+@import ./_reset
+@import ./_mixin
+
+body
+  position: relative
+
+  .bg-close-side-nav
+    width: 100vw
+    height: 100vh
+    position: fixed
+    z-index: 90
+    display: none
+
+  .side-nav
+    position: fixed
+    z-index: 100
+    right: 0
+    border-left: 2.5px solid #21364E
+    width: 300px
+    height: 100vh
+    background: #2C4664
+    display: flex
+    flex-direction: column
+    align-items: center
+    transition: all 0.3s ease
+    transform: translateX(100%)
+
+    .close-side-nav
+      width: 35px
+      height: 35px
+      position: absolute
+      top: 15px
+      left: 15px
+      color: #fff
+      font-size: 32px
+      border: 0
+      background: transparent
+      rotate: 45deg
+
+    .nav-links
+      gap: 20px
+      margin: 50px auto
+      width: 80%
+      display: flex
+      flex-direction: column
+      align-items: center
+      list-style: none
+
+      .nav-link
+
+        a
+          font-family: inherit
+          color: #fff
+          font-size: 18px
+          font-weight: 300
+          line-height: 32px
+          text-decoration: none
+
+    .nav-cta
+      margin: 0 auto
+      color: #fff
+      font-size: 16px
+      font-weight: 400
+      letter-spacing: 1px
+      text-transform: uppercase
+      padding: 12px 50px
+      background: transparent
+      border: 1px solid rgba(255, 255, 255, 0.3)
+      border-radius: 1000px
+
+  // NAVBAR
+  nav
+    padding: 16px 0
+    width: 100%
+    position: absolute
+    top: 0
+    z-index: 10
+    
+
+    .container
+      @include container
+
+      .logo
+        color: #fff
+        font-size: 40px
+        font-weight: 200
+        line-height: 48px
+        text-decoration: none
+
+      .nav-links 
+        display: flex
+        align-items: center
+        gap: 40px
+        list-style: none
+
+        .nav-link
+
+          .link
+            font-family: inherit
+            color: #fff
+            font-size: 18px
+            font-weight: 300
+            line-height: 32px
+            text-decoration: none
+
+            &:hover
+              text-decoration: underline
+
+      .btns
+        display: flex
+        align-items: center
+        gap: 10px
+
+      .nav-cta
+        color: #fff
+        font-size: 16px
+        font-weight: 400
+        letter-spacing: 1px
+        text-transform: uppercase
+        padding: 12px 50px
+        background: transparent
+        border: 1px solid rgba(255, 255, 255, 0.3)
+        border-radius: 1000px
+        cursor: pointer
+        transition: all 0.3s ease
+
+        &:hover
+          background: rgba(255, 255, 255, 0.2)
+
+      .side-nav-btn
+        width: 48px
+        height: 48px
+        border: 1px solid rgba(255, 255, 255, 0.3)
+        border-radius: 50%
+        background: transparent
+        cursor: pointer
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: center
+        gap: 3px
+        display: none
+
+        .line
+          width: 12px
+          height: 2px
+          background: #fff
+
+  .hero-section
+    width: 100%
+    height: 880px
+    padding-top: 208px
+    background: linear-gradient(rgba(0, 0, 0, 0.1),rgba(0, 0, 0, 0.1)), url("../img/hero-bg-img.webp")
+    background-position: top
+    background-repeat: no-repeat
+    background-size: cover
+
+    .container 
+      @include container
+
+      .main-heading
+        width: 310px
+        color: #fff
+        font-weight: 200
+        font-size: 72px
+        line-height: 110%
+
+      .white-text
+        color: #fff
+        font-weight: 300
+        font-size: 32px
+        margin-top: 25px
+
+      .social-apps-container
+        @include social-apps-container
+
+      .search-container
+        width: 100%
+        background: #2C4664
+        border-radius: 15px
+        box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.1)
+        margin-top: 64px
+        position: relative
+
+        .availability-search
+          width: 100%
+          display: grid
+          grid-template-columns: repeat(8, 1fr)
+
+          .block
+            padding: 32px
+
+            &.b-right
+              border-right: 1px solid #21364E
+
+          .arrival, .departure, .search-button-container
+            grid-column: span 2
+
+          .text
+            font-weight: 400
+            font-size: 14px
+            line-height: 24px
+            color: rgba(255, 255, 255, 0.5)
+
+            &.center
+              text-align: center
+
+          .date-input
+            cursor: pointer
+            display: flex
+            align-items: center
+
+            .day
+              font-weight: 200
+              font-size: 56px
+              line-height: 64px
+              color: #FFFFFF
+
+            .date-info
+              margin: 0 16px
+
+              .month-year
+                font-weight: 300
+                font-size: 18px
+                line-height: 32px
+                color: #FFFFFF
+
+              .day-name
+                font-weight: 400
+                font-size: 14px
+                line-height: 24px
+                color: rgba(255, 255, 255, 0.5)
+
+          .adults, .children
+
+            .number-container
+              display: flex
+              align-items: center
+              justify-content: space-between
+
+              .number
+                font-weight: 200
+                font-size: 56px
+                line-height: 64px
+                color: #fff
+
+              button
+                cursor: pointer
+                border: 0
+                background: transparent
+                font-weight: 300
+                font-size: 24px
+                color: #fff
+
+          .search-button-container
+            display: flex
+            align-items: center
+            justify-content: center
+
+            .green-btn
+              @include green-btn()
+              padding: 12px 24px
+              font-size: 16px
+              line-height: 24px
+
+        .down-btn
+          width: 48px
+          height: 48px
+          background: #fff
+          border: 0
+          border-radius: 50% 
+          cursor: pointer
+          display: flex
+          align-items: center
+          justify-content: center
+          position: absolute
+          bottom: 0
+          left: 50%
+          transform: translate(-50%, 50%)
+          z-index: 3
+
+        .blue-container-behind
+          height: 40px
+          width: 95%
+          background: #192C42
+          border-radius: 15px
+          box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.1)
+          display: block
+          position: absolute
+          bottom: -16px
+          left: 50%
+          transform: translateX(-50%)
+          z-index: -1
+
+        .dots
+          position: absolute
+          z-index: -1
+          right: 65px
+          top: -45px
+
+  .section 
+
+    .container
+      @include container
+
+      .text-container
+        @include text-container
+
+      .card
+        height: 560px
+        width: 570px
+        box-shadow: 20px 20px 40px rgba(0, 0, 0, 0.1)
+        border-radius: 30px
+        position: relative
+
+        .image1
+          height: 418px
+          width: 100%
+          background-image: url("../img/hotel-img.webp")
+          background-position: center
+          background-repeat: no-repeat
+          background-size: cover
+          border-radius: 30px 30px 0 0
+
+        .image2
+          height: 418px
+          width: 100%
+          background-image: url("../img/wellnes.png")
+          background-position: center
+          background-repeat: no-repeat
+          background-size: cover
+          border-radius: 30px 30px 0 0
+
+        .image3
+          height: 418px
+          width: 100%
+          background-image: url("../img/bars-img.webp")
+          background-position: center
+          background-repeat: no-repeat
+          background-size: cover
+          border-radius: 30px 30px 0 0
+
+        &.first
+
+          .dots
+            position: absolute
+            z-index: -1
+            top: 170px
+            left: -48px
+
+        &.second
+          
+          .dots
+            position: absolute
+            z-index: -1
+            top: 152px
+            right: -48px
+
+        &.third
+          
+          .dots
+            position: absolute
+            z-index: -1
+            top: 166px
+            left: -48px
+
+        .bottom
+          background: #fff
+          height: 144px
+          width: 100%
+          border-radius: 0 0 30px 30px
+          display: flex
+          align-items: center
+
+          .play-btn
+            width: 80px
+            height: 80px
+            background: #2C4664
+            border: 0
+            border-radius: 50%
+            cursor: pointer
+            margin-left: 32px
+
+            &:hover
+              background: #193453
+
+          .icon
+            width: 96px
+            height: 96px
+            border-radius: 50%
+            background: linear-gradient(180deg, #7F95AE -90%, #E5E9EF 100%)
+            display: flex
+            align-items: center
+            justify-content: center
+            margin-left: 32px
+
+          .desc
+            margin-left: 16px
+
+            .darker-text
+              margin-bottom: 2px
+              font-weight: 300
+              font-size: 24px
+              line-height: 32px
+              color: #333333
+
+        .addiotion
+          position: absolute
+          top: 48%
+          right: -32px
+          border-radius: 15px
+
+          &.block 
+            width: 224px
+            height: 224px
+            background: #fff
+            box-shadow: 20px 20px 40px rgba(0, 0, 0, 0.1)
+            display: flex
+            flex-direction: column
+            align-items: center
+            justify-content: center
+
+            .darker-text
+              font-size: 56px
+              font-weight: 200
+              color: #333
+              line-height: 64px
+              position: relative
+
+              span
+                font-size: 24px
+                line-height: 32px
+                position: absolute
+                top: 0
+                transform: translateX(-100%)
+
+            .text
+              font-weight: 300
+              font-size: 18px
+              line-height: 32px
+
+            img
+              margin-top: 22px
+
+        .container-behind
+          background: #fff
+          width: 90%
+          height: 64px
+          border-radius: 30px
+          position: absolute
+          bottom: -16px
+          left: 50%
+          transform: translateX(-50%)
+          z-index: -1
+          box-shadow: 20px 20px 40px rgba(0, 0, 0, 0.1)
+
+        .container-behind-second
+          background: #fff
+          width: 80%
+          height: 64px
+          border-radius: 30px
+          position: absolute
+          bottom: -32px
+          left: 50%
+          transform: translateX(-50%)
+          z-index: -2
+          box-shadow: 20px 20px 40px rgba(0, 0, 0, 0.1)
+
+    .lighter
+      background: #fff
+
+      .container
+        @include container
+
+        .second-heading
+          @include second-heading
+          text-align: center
+
+        .grid-field
+          margin-top: 50px
+          display: grid
+          gap: 30px
+          grid-template-columns: repeat(4, 1fr)
+          grid-template-rows: 1fr 1fr
+          position: relative
+
+          .dots-left, .dots-right
+            position: absolute
+            z-index: -1
+
+          .dots-left
+            top: 64px
+            left: -72px
+
+          .dots-right
+            bottom: 56px
+            right: -48px
+
+          .block
+            background: #fff
+            padding: 32px
+            box-shadow: 20px 20px 40px rgba(0, 0, 0, 0.1)
+            border-radius: 30px
+            position: relative
+
+            .icon
+              display: flex
+              align-items: center
+              justify-content: center
+
+              &.bigger
+                width: 112px
+                height: 112px
+                border-radius: 15px
+                background: #fff
+                box-shadow: 20px 20px 40px rgba(0, 0, 0, 0.1)
+                position: absolute
+                top: 48px
+                left: 48px
+
+              &.white
+                width: 80px
+                height: 80px
+                border: 1px solid #D8D8D8
+                border-radius: 15px
+
+              &.blue
+                width: 80px
+                height: 80px
+                background: #3F5E82
+                border-radius: 15px
+                box-shadow: 20px 20px 40px rgba(0, 0, 0, 0.1)
+
+          .first-block
+            padding: 24px 24px 38px 24px
+            grid-column: span 2
+            grid-row: span 2
+
+            .image-field
+              width: 100%
+              height: 320px
+              border-radius: 20px
+              background-image: url("../img/office.webp")
+              background-position: center
+              background-repeat: no-repeat
+              background-size: cover
+
+            .third-heading
+              @include third-heading()
+              margin-top: 35px
+              margin-left: 8px
+
+            .text
+              margin: 15px 8px 0 8px
+
+          .second-block
+            grid-column: span 2
+            display: flex
+            justify-content: space-between
+
+          .text-container
+            max-width: 394px 
+
+            .fourth-heading
+              color: #333
+              font-weight: 300
+              font-size: 24px
+              line-height: 32px
+
+            .text
+              margin-top: 18px
+
+    .container
+
+      .top-text
+        width: 100%
+        display: flex
+        justify-content: space-between
+
+        .second-heading
+          @include second-heading()
+            
+        .side-text
+          max-width: 370px 
+
+      .rooms
+        margin-top: 46px
+        position: relative
+
+        .dots-left, .dots-right
+          position: absolute
+          z-index: -1
+
+        .dots-left
+          top: 72px
+          left: -48px
+
+        .dots-right
+          bottom: 116px
+          right: -48px
+
+        .slider-btn
+          @include slider-btn
+
+        .slider
+          padding-bottom: 70px 
+          width: 100%
+          display: grid
+          grid-template-columns: repeat(4, 370px)
+          column-gap: 30px
+
+          .slider-block
+            padding: 24px 24px 48px 24px
+            background: #fff
+            box-shadow: 20px 20px 40px rgba(0, 0, 0, 0.1)
+            border-radius: 30px
+            position: relative
+
+            &.none
+              display: none
+
+            .container-behind
+              position: absolute
+              z-index: -1
+              width: 90%
+              height: 32px
+              background: #fff
+              border-radius: 30px
+              bottom: -16px
+              left: 50%
+              transform: translateX(-50%)
+              box-shadow: 20px 20px 40px rgba(0, 0, 0, 0.1)
+
+              &.dark-blue
+                background: #2C4664
+
+            .container-behind-second
+              position: absolute
+              z-index: -2
+              width: 75%
+              height: 48px
+              background: #fff
+              border-radius: 30px
+              bottom: -32px
+              left: 50%
+              transform: translateX(-50%)
+              box-shadow: 20px 20px 40px rgba(0, 0, 0, 0.1)
+
+              &.dark-blue
+                background: #2C4664
+
+            &.dark-blue
+              background: #2C4664
+
+            .price-block
+              width: 136px
+              height: 64px
+              background: #fff
+              border-radius: 15px
+              display: flex
+              align-items: center
+              justify-content: center
+              position: absolute
+              top: 48px
+              left: 48px
+
+              .price
+                font-weight: 300
+                font-size: 20px
+                line-height: 32px
+                color: #333
+
+            .img-container
+              width: 100%
+              height: 272px
+              border-radius: 20px
+              background-position: top
+              background-repeat: no-repeat
+              background-size: cover
+
+              &.img1
+                background-image: url("../img/classic-room.webp")
+
+              &.img2
+                background-image: url("../img/double-room.webp")
+
+              &.img3
+                background-image: url("../img/super-room.webp")
+
+            .room-info
+              margin: 35px calc( 32px - 24px ) 0 calc( 32px - 24px )
+
+              .room-name
+                font-weight: 200
+                font-size: 40px
+                line-height: 48px
+                color: #333
+
+                &.white
+                  color: #fff
+
+              .about
+                margin-top: 15px
+
+                &.white
+                  color: rgba(255, 255, 255, 0.5)
+
+              button
+                @include dark-blue-btn
+                margin-top: 20px
+
+                &.green-btn
+                  @include green-btn
+
+    .dark-blue
+      background: #2C4664
+
+      .container
+
+        .progress-container
+          display: grid
+          grid-template-columns: repeat(4, auto)
+          align-items: center
+          justify-content: space-between
+
+          div
+            display: flex
+            flex-direction: column
+            align-items: center
+
+            .circle
+              width: 170px
+              height: 170px
+              border-radius: 50%
+              display: flex
+              align-items: center
+              justify-content: center
+              position: relative
+
+              &::after
+                content: ""
+                position: absolute
+                width: 100%
+                height: 100%
+                border-radius: 50%
+                z-index: 10
+
+              &.proc73::after
+                background: conic-gradient(#C8FF8C calc( (73 * 360deg) / 100 ), #3C5B7E 0deg)
+
+              &.proc42::after
+                background: conic-gradient(#C8FF8C calc( (42 * 360deg) / 100 ), #3C5B7E 0deg)
+
+              &.proc50::after
+                background: conic-gradient(#C8FF8C calc( (50 * 360deg) / 100 ), #3C5B7E 0deg)
+
+              &.proc99::after
+                background: conic-gradient(#C8FF8C calc( (99 * 360deg) / 100 ), #3C5B7E 0deg)
+
+              .progress
+                width: calc( 170px - (2 * 8px) )
+                height: calc( 170px - (2 * 8px) )
+                background: #2C4664
+                border-radius: 50%
+                display: flex
+                align-items: center
+                justify-content: center
+                z-index: 20
+
+                .progress-number
+                  font-weight: 200
+                  font-size: 56px
+                  color: #fff
+                  z-index: 20
+
+            .name-progress
+              font-weight: 300
+              font-size: 24px
+              line-height: 32px
+              color: #fff
+              margin-top: 28px
+
+    .container
+
+      .second-header
+        @include second-heading
+        text-align: center
+
+      .testimonials
+        width: 100%
+        margin-top: 50px
+        position: relative
+
+        .dots-left, .dots-right
+          position: absolute
+          z-index: -1
+
+        .dots-left
+          top: 72px
+          left: -48px
+
+        .dots-right
+          bottom: 116px
+          right: -48px
+
+        .slider-btn
+          @include slider-btn
+
+        .slider
+          padding-bottom: 80px
+          display: grid
+          grid-template-columns: repeat(3, 570px)
+          gap: 30px
+          position: relative
+
+          .slider-block
+            padding: 43px 32px 48px 32px
+            background: #fff
+            box-shadow: 20px 20px 40px rgba(0, 0, 0, 0.1)
+            border-radius: 30px
+            position: relative
+
+            &.none
+              display: none
+
+            .container-behind
+              position: absolute
+              z-index: -1
+              width: 90%
+              height: 32px
+              background: #fff
+              border-radius: 30px
+              bottom: -16px
+              left: 50%
+              transform: translateX(-50%)
+              box-shadow: 20px 20px 40px rgba(0, 0, 0, 0.1)
+
+            .container-behind-second
+              position: absolute
+              z-index: -2
+              width: 75%
+              height: 48px
+              background: #fff
+              border-radius: 30px
+              bottom: -32px
+              left: 50%
+              transform: translateX(-50%)
+              box-shadow: 20px 20px 40px rgba(0, 0, 0, 0.1)
+
+            .icon
+              position: absolute
+              top: 32px
+              right: 32px
+
+            .third-heading
+              @include third-heading
+
+              &.width195
+                width: 195px
+
+            .testimonial
+              margin-top: 31px
+
+            .customer
+              margin-top: 56px
+              display: flex
+              align-items: center
+              gap: 24px
+
+              .customer-info
+
+                .customer-name
+                  font-weight: 300
+                  font-size: 24px
+                  line-height: 32px
+                  color: #333
+
+                .rating-img
+                  margin-top: 7px
+
+      .blog
+        width: 100%
+        margin-top: 50px
+        position: relative
+
+        .dots-left, .dots-right
+          position: absolute
+          z-index: -1
+
+        .dots-left
+          top: 72px
+          left: -48px
+
+        .dots-right
+          bottom: 116px
+          right: -48px
+
+        .slider-btn
+          @include slider-btn
+
+        .slider
+          padding-bottom: 80px
+          display: grid
+          grid-template-columns: repeat(3, 370px)
+          gap: 30px
+          position: relative
+
+          .slider-block
+            padding: 24px 24px 38px 24px
+            background: #fff
+            box-shadow: 20px 20px 40px rgba(0, 0, 0, 0.1)
+            border-radius: 30px
+            position: relative
+
+            .container-behind
+              position: absolute
+              z-index: -1
+              width: 90%
+              height: 32px
+              background: #fff
+              border-radius: 30px
+              bottom: -16px
+              left: 50%
+              transform: translateX(-50%)
+              box-shadow: 20px 20px 40px rgba(0, 0, 0, 0.1)
+
+            .container-behind-second
+              position: absolute
+              z-index: -2
+              width: 75%
+              height: 48px
+              background: #fff
+              border-radius: 30px
+              bottom: -32px
+              left: 50%
+              transform: translateX(-50%)
+              box-shadow: 20px 20px 40px rgba(0, 0, 0, 0.1)
+
+            .date-container
+              width: 104px
+              height: 64px
+              background: #fff
+              border-radius: 15px
+              display: flex
+              align-items: center
+              justify-content: center
+              box-shadow: 20px 20px 40px rgba(0, 0, 0, 0.1)
+              position: absolute
+              top: 48px
+              left: 48px
+
+              .date
+                font-weight: 300
+                font-size: 20px
+                line-height: 32px
+                color: #333333
+
+            .image-container
+              width: 100%
+              height: 248px
+              border-radius: 20px
+              background-position: top
+              background-repeat: no-repeat
+              background-size: cover
+
+              &.img1
+                background: url("../img/blog-img1.webp")
+
+              &.img2
+                background: url("../img/blog-img2.webp")
+
+              &.img3
+                background: url("../img/blog-img3.webp")
+
+            .text-container
+              padding: 0 8px
+
+              .third-heading
+                @include third-heading
+                width: 287px
+                margin-top: 27px
+
+              .short-info
+                line-height: 155%
+                margin-top: 15px
+
+              .creator-info
+                margin-top: 30px
+                display: flex
+                align-items: center
+                justify-content: space-between
+
+                .number-of-comments
+                  display: flex
+                  align-items: center
+                  gap: 8px
+  footer
+
+    .images
+      overflow: hidden
+      position: relative
+
+      .grid-container
+        width: 100%
+        display: flex
+
+        img
+          width: calc( 100% / 6 )
+          height: auto
+
+      .dark-layer
+        width: 100%
+        height: 240px
+        background: rgba(44, 70, 100, 0.35)
+        position: absolute
+        top: 0
+
+    .dark-blue
+      background: #2C4664
+
+      .container
+        @include container
+
+        .left
+
+          .third-heading
+            @include third-heading()
+            color: #fff  
+
+          .phone
+            margin-top: 15px
+
+          .phone, .email, .location
+            display: flex
+            align-items: center
+            gap: 15px
+
+            .hotel-info
+              color: #fff
+              text-decoration: none
+
+              &.darker
+                color: rgba(255, 255, 255, 0.5)
+            
+          .email, .location
+            margin-top: 16px
+
+        .middle
+          width: 360px 
+
+          .bigger-text
+            font-weight: 300
+            font-size: 24px
+            line-height: 32px
+            color: #FFFFFF
+
+          .nav-links-container
+            margin-top: 18px
+            display: flex
+            justify-content: space-between
+
+            .first, .second
+              display: flex
+              flex-direction: column
+              gap: 20px
+
+              .nav-link
+                color: #fff
+                text-decoration: none 
+        
+        .right
+
+          .bigger-text
+            font-weight: 300
+            font-size: 24px
+            line-height: 32px
+            color: #fff
+
+          .email-input
+            margin-top: 28px
+            display: flex
+            align-items: center
+            background: #fff
+
+            .input-box
+              height: 100%
+              background: transparent
+              border: 0
+              font-weight: 300
+              font-size: 18px
+              line-height: 32px
+              color: #333
+              padding: 8px 16px
+
+            button
+              padding: 8px 11px
+              background: transparent
+              border: 0
+              height: 100%
+              cursor: pointer
+
+          .text
+            margin-top: 15px
+            font-weight: 400
+            font-size: 14px
+            line-height: 24px
+            color: rgba(255, 255, 255, 0.5)
+
+    .darker-blue
+      background: #223851
+
+      .container
+        @include container
+
+        .social-apps-container
+          @include social-apps-container
+
+          .social-icon
+            margin-top: 0
+
+        .copyright
+          font-weight: 300
+          font-size: 18px
+          line-height: 32px
+          color: rgba(255, 255, 255, 0.5)
+          text-align: center
+        
+@import ./_media-queries
+                    
+              

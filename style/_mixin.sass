@@ -1,0 +1,170 @@
+// CONTAINER
+@mixin container()
+  max-width: 1210px
+  padding: 0 20px
+  margin: 0 auto
+  position: relative
+  z-index: 1
+
+  &.flex-center
+    display: flex
+    align-items: center
+    justify-content: space-between
+
+  &.flex-space
+    display: flex
+    justify-content: space-between
+
+  &.p31-32
+    padding: 31px 20px 32px 20px
+
+  &.p75-71
+    padding: 75px 20px 71px 20px
+
+  &.p94-35
+    padding: 94px 20px 35px 20px
+
+  &.p98-64
+    padding: 98px 20px 64px 20px
+
+  &.p78-112
+    padding: 78px 20px 112px 20px
+
+  &.p144-176
+    padding: 144px 20px 176px 20px
+
+@mixin social-apps-container
+  display: flex
+  align-items: center
+  gap: 8px
+
+  .social-icon
+    width: 48px
+    height: 48px
+    background: transparent
+    border: 1px solid #fff
+    border-radius: 50%
+    display: flex
+    align-items: center
+    justify-content: center
+    cursor: pointer
+    margin-top: 39px
+    transition: all 0.3s ease
+
+    &:hover
+      background: rgba(255, 255, 255, 0.2)
+  
+// TEXT
+@mixin second-heading()
+  color: #333
+  font-size: 56px
+  font-weight: 200
+  line-height: 123%
+
+@mixin third-heading()
+  color: #333
+  font-size: 40px
+  font-weight: 200
+  line-height: 48px
+
+// BTNS
+@mixin outline-btn()
+  color: #333
+  font-size: 16px
+  font-weight: 400
+  letter-spacing: 1px
+  line-height: 134%
+  text-transform: uppercase
+  padding: 12px 40px
+  background: transparent
+  cursor: pointer
+  border-radius: 1000px
+  border: 1px solid rgba(51, 51, 51, 0.3)
+  transition: all 0.3s ease
+
+  &:hover
+    background: #e1eeff
+
+@mixin green-btn()
+  color: #333
+  font-size: 16px
+  font-weight: 400
+  letter-spacing: 1px
+  text-transform: uppercase
+  padding: 12px 28px
+  background: #C8FF8C
+  border-radius: 1000px
+  border: 0
+  cursor: pointer
+
+  &:hover
+    background: #b8f17b
+
+@mixin dark-blue-btn()
+  color: #fff
+  font-size: 16px
+  font-weight: 400
+  letter-spacing: 1px
+  text-transform: uppercase
+  padding: 12px 28px
+  background: #2C4664
+  border-radius: 1000px
+  border: 0
+  cursor: pointer
+
+  &:hover
+    background: #243d5a
+
+@mixin slider-btn
+  width: 48px
+  height: 48px
+  background: #fff
+  border: 0
+  border-radius: 50%
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.1)
+  display: flex
+  align-items: center
+  justify-content: center
+  cursor: pointer
+  position: absolute
+  z-index: 10
+
+  &.left
+    top: 40%
+    left: 0
+    transform: translateX(-50%)
+
+  &.right
+    top: 40%
+    right: 0
+    transform: translateX(50%)
+  
+// TEXT CONTAINER
+@mixin text-container()
+  padding-top: 16px
+  
+  &.width390
+    max-width: 390px
+
+  &.width470
+    max-width: 470px
+
+  .icon
+    width: 112px
+    height: 112px
+    border: 1px solid #D8D8D8
+    border-radius: 15px
+    display: flex
+    align-items: center
+    justify-content: center
+
+  h2
+    @include second-heading
+    margin-top: 46px
+
+  .text
+    margin-top: 28px
+
+  .about-cta
+    @include outline-btn
+    margin-top: 28px
